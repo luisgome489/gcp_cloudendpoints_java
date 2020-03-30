@@ -7,6 +7,12 @@
 This sample demonstrates how to use Google Cloud Endpoints Frameworks using
 Java on App Engine Standard.
 
+## Note
+
+first of all, if you do not have an app created in appengine proyect, you must execute the following:
+
+gcloud app create
+
 ## Build with Maven
 
 ### Adding the project ID to the sample API code
@@ -21,7 +27,7 @@ To add the project ID:
 0. For `<endpoints.project.id>`, replace the value `YOUR_PROJECT_ID` with
 your project ID.
 
-0. Edit the file `src/main/java/com/example/echo/Echo.java`.
+0. Edit the file `src/main/java/com/aegcp/route/Route.java`.
 
 0. Replace the value `YOUR-PROJECT-ID` with your project ID.
 
@@ -69,12 +75,12 @@ command:
          -H "Content-Type: application/json" \
          -X POST \
          -d '{"message":"echo"}' \
-         https://$PROJECT_ID.appspot.com/_ah/api/echo/v1/echo
+         https://$PROJECT_ID.appspot.com/_ah/api/route/v1/route
 
 You will get a 200 response with the following data:
 
     {
-     "message": "echo"
+     "message": "some text"
     }
 
 ## Build with gradle
@@ -86,7 +92,7 @@ You will get a 200 response with the following data:
 0. For `def projectId = 'YOUR_PROJECT_ID'`, replace the value `YOUR_PROJECT_ID`
 with your project ID.
 
-0. Edit the file `src/main/java/com/example/echo/Echo.java
+0. Edit the file `src/main/java/com/aegcp/route/Route.java
 
 0. Replace the value `YOUR-PROJECT-ID` with your project ID.
 
@@ -156,11 +162,11 @@ command:
          -H "Content-Type: application/json" \
          -X POST \
          -d '{"message":"echo"}' \
-         https://$PROJECT_ID.appspot.com/_ah/api/echo/v1/echo
+         https://$PROJECT_ID.appspot.com/_ah/api/route/v1/route
 
 You will get a 200 response with the following data:
 
     {
-     "message": "echo"
+     "message": "some data"
     }
 # gcp_cloudendpoints_java

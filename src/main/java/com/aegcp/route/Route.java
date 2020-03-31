@@ -67,12 +67,7 @@ public class Route {
    * <p>Note that httpMethod is not specified. This will default to a reasonable HTTP method
    * depending on the API method name. In this case, the HTTP method will default to POST.
    */
-  // [START route_method]
-  @ApiMethod(name = "route")
-  public Message route(Message message, @Named("n") @Nullable Integer n) {
-    return doRoute(message, n);
-  }
-  // [END route_method]
+
 
   /**
    * Routes the received message back. If n is a non-negative integer, the message is copied that
@@ -84,12 +79,7 @@ public class Route {
    * <p>Note that httpMethod is not specified. This will default to a reasonable HTTP method
    * depending on the API method name. In this case, the HTTP method will default to POST.
    */
-  // [START route_path]
-  @ApiMethod(name = "route_path_parameter", path = "route/{n}")
-  public Message routePathParameter(Message message, @Named("n") int n) {
-    return doRoute(message, n);
-  }
-  // [END route_path]
+
 
   /**
    * Routes the received message back. If n is a non-negative integer, the message is copied that
